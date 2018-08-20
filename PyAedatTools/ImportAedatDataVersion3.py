@@ -206,7 +206,7 @@ def ImportAedatDataVersion3(aedat):
             packetTimeStamps = np.append(packetTimeStamps, np.zeros(packetCount, 'uint64'), 0)
         packetPointers[packetCount] = fileHandle.tell() - 28    
         if packetCount % 100 == 0 :
-            print 'packet: %d; file position: %d MB' % (packetCount, math.floor(info['fileHandle'].tell / 1000000))
+            print('packet: %d; file position: %d MB' % (packetCount, math.floor(info['fileHandle'].tell / 1000000)))
         if startPacket > packetCount or np.mod(packetCount, modPacket) > 0:
             # Ignore this packet as its count is too low
             eventSize = struct.unpack('I', header[4:8])[0]
