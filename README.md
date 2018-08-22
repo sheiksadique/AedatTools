@@ -29,6 +29,10 @@ Look at the provided example scripts for how to use these functions.
 
 As of 2017_06, data types 0-3 (Special, Polarity, Frame and Imu6) are almost fully supported. Device types DVS128 and DAVIS are fully supported with the possible exception of  HetDavis (I haven't tried). There is some support for other data types, for example, the ImportAedat routines recognise DAS1 / cochlear / ear events, and most other event types - no dynapse support yet.
 
+## How to import from aedat files(Python)
+
+Checkout the example script in the example folder.
+
 ## How to import from aedat files
 
 ImportAedat calls ImportAedatHeaders to import the info from the header lines of a .aedat file. From this it finds out the type of aedat file (v1, 2 or 3). Then it calls the appropriate function:
